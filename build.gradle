@@ -1,0 +1,16 @@
+buildscript {
+    dependencies {
+        classpath 'com.google.gms:google-services:4.4.2' // Actualiza a la última versión si es necesario
+    }
+}
+
+plugins {
+    id 'com.android.application' version '8.9.0' apply false
+    id 'com.android.library' version '8.9.0' apply false
+    id 'org.jetbrains.kotlin.android' version '2.0.21' apply false // Corregí la versión de Kotlin
+    id 'androidx.navigation.safeargs.kotlin' version '2.8.9' apply false // Actualicé la versión de Navigation
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}
